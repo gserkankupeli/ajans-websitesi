@@ -1,0 +1,18 @@
+{
+  "Navbar": {
+    "features": "Özellikler",
+    "testimonials": "Referanslar",
+    "pricing": "Fiyatlandırma",
+    "faqs": "SSS",
+    "login": "Giriş Yap",
+    "getStarted": "Hemen Başla"
+  },
+  "Hero": {
+    "badge": "v2.0 yayında",
+    "title": "Bir sonraki fikrini",
+    "titleHighlight": "hiç olmadığı kadar hızlı geliştir",
+    "description": "Modern ve responsive şablonumuzla harika web siteleri oluşturun. Girişimler, ajanslar ve SaaS ürünleri için mükemmel.",
+    "getStarted": "Hemen Başla",
+    "watchDemo": "Demoyu İzle"
+  }
+}

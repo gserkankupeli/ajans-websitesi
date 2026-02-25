@@ -1,0 +1,18 @@
+{
+    "Navbar": {
+        "features": "Features",
+        "testimonials": "Testimonials",
+        "pricing": "Pricing",
+        "faqs": "FAQs",
+        "login": "Log in",
+        "getStarted": "Get Started"
+    },
+    "Hero": {
+        "badge": "v2.0 is now live",
+        "title": "Build your next idea",
+        "titleHighlight": "faster than ever",
+        "description": "Create stunning websites with our modern, responsive template. Perfect for startups, agencies, and SaaS products.",
+        "getStarted": "Get Started",
+        "watchDemo": "Watch Demo"
+    }
+}
