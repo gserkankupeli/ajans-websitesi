@@ -5,15 +5,18 @@ import { Footer } from "@/components/footer";
 import { ArrowRight, ArrowLeft, Clock } from "lucide-react";
 import { notFound } from "next/navigation";
 import NextImage from "next/image";
+import { setRequestLocale } from 'next-intl/server';
 
 export function generateStaticParams() {
-    return flowAsistanBlogPosts.map((post) => ({
-        slug: post.slug,
-    }));
+    return flowAsistanBlogPosts.flatMap((post) => [
+        { locale: 'tr', slug: post.slug },
+        { locale: 'en', slug: post.slug },
+    ]);
 }
 
-export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
-    const { slug } = await params;
+export default async function BlogPost({ params }: { params: Promise<{ slug: string; locale: string }> }) {
+    const { slug, locale } = await params;
+    setRequestLocale(locale);
     const post = flowAsistanBlogPosts.find((p) => p.slug === slug);
 
     if (!post) {

@@ -1,4 +1,5 @@
 import { getBlogPostBySlug, blogPosts } from "@/data/blog";
+import { setRequestLocale } from 'next-intl/server';
 import { notFound } from "next/navigation";
 import NextImage from "next/image";
 import { Link } from "@/i18n/routing";
@@ -11,9 +12,10 @@ type Props = {
 };
 
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
-  }));
+  return blogPosts.flatMap((post) => [
+    { locale: 'tr', slug: post.slug },
+    { locale: 'en', slug: post.slug },
+  ]);
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -30,6 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPostPage({ params }: Props) {
   const resolvedParams = await params;
+  setRequestLocale(resolvedParams.locale);
   const post = getBlogPostBySlug(resolvedParams.slug);
 
   if (!post) {

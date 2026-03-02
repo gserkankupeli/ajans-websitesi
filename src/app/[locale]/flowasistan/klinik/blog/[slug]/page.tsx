@@ -4,15 +4,17 @@ import NextImage from "next/image";
 import { Link } from "@/i18n/routing";
 import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import { Metadata } from 'next';
+import { setRequestLocale } from 'next-intl/server';
 
 type Props = {
     params: Promise<{ slug: string; locale: string }>
 };
 
 export async function generateStaticParams() {
-    return klinikBlogPosts.map((post) => ({
-        slug: post.slug,
-    }));
+    return klinikBlogPosts.flatMap((post) => [
+        { locale: 'tr', slug: post.slug },
+        { locale: 'en', slug: post.slug },
+    ]);
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -29,6 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function KlinikBlogPostPage({ params }: Props) {
     const resolvedParams = await params;
+    setRequestLocale(resolvedParams.locale);
     const post = getKlinikPostBySlug(resolvedParams.slug);
 
     if (!post) {
