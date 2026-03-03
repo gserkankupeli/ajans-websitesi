@@ -30,19 +30,19 @@ export function FlowAsistanCalendlySection() {
                 }
                 p(cal, ar);
             };
-        })(window, "https://app.cal.eu/embed/embed.js", "init");
+        })(window, "https://app.cal.com/embed/embed.js", "init");
 
         const Cal = (window as any).Cal;
 
-        Cal("init", "tanisma", { origin: "https://app.cal.eu" });
+        Cal("init", "tanisma-toplantisi", { origin: "https://app.cal.com" });
 
-        Cal.ns.tanisma("inline", {
-            elementOrSelector: "#my-cal-inline-tanisma",
+        Cal.ns["tanisma-toplantisi"]("inline", {
+            elementOrSelector: "#my-cal-inline-tanisma-toplantisi",
             config: { "layout": "month_view", "useSlotsViewOnSmallScreen": "true" },
-            calLink: "serkankupeli/tanisma",
+            calLink: "serkan-kupeli/tanisma-toplantisi",
         });
 
-        Cal.ns.tanisma("ui", { "theme": "dark", "hideEventTypeDetails": false, "layout": "month_view" });
+        Cal.ns["tanisma-toplantisi"]("ui", { "theme": "dark", "hideEventTypeDetails": false, "layout": "month_view" });
     }, []);
 
     return (
@@ -61,7 +61,7 @@ export function FlowAsistanCalendlySection() {
                 {/* Cal.com Widget Container */}
                 <div className="max-w-4xl mx-auto bg-slate-800 border border-slate-700 rounded-2xl overflow-hidden shadow-2xl mb-8 h-[850px] md:h-[750px]">
                     <div
-                        id="my-cal-inline-tanisma"
+                        id="my-cal-inline-tanisma-toplantisi"
                         style={{ width: "100%", height: "100%", overflow: "scroll" }}
                     />
                 </div>

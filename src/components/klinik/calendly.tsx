@@ -30,16 +30,16 @@ export function KlinikCalendly() {
                 }
                 p(cal, ar);
             };
-        })(window, "https://app.cal.eu/embed/embed.js", "init");
+        })(window, "https://app.cal.com/embed/embed.js", "init");
 
         const Cal = (window as any).Cal;
 
-        Cal("init", "klinik", { origin: "https://app.cal.eu" });
+        Cal("init", "klinik", { origin: "https://app.cal.com" });
 
         Cal.ns.klinik("inline", {
             elementOrSelector: "#my-cal-inline-klinik",
             config: { "layout": "month_view", "useSlotsViewOnSmallScreen": "true" },
-            calLink: "serkankupeli/klinik",
+            calLink: "serkan-kupeli/klinik",
         });
 
         Cal.ns.klinik("ui", { "theme": "dark", "hideEventTypeDetails": false, "layout": "month_view" });

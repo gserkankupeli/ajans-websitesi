@@ -29,16 +29,16 @@ export function EmlakCalendly() {
                 }
                 p(cal, ar);
             };
-        })(window, "https://app.cal.eu/embed/embed.js", "init");
+        })(window, "https://app.cal.com/embed/embed.js", "init");
 
         const Cal = (window as any).Cal;
 
-        Cal("init", "emlak", { origin: "https://app.cal.eu" });
+        Cal("init", "emlak", { origin: "https://app.cal.com" });
 
         Cal.ns.emlak("inline", {
             elementOrSelector: "#my-cal-inline-emlak",
             config: { "layout": "month_view", "useSlotsViewOnSmallScreen": "true" },
-            calLink: "serkankupeli/emlak",
+            calLink: "serkan-kupeli/emlak",
         });
 
         Cal.ns.emlak("ui", { "cssVarsPerTheme": { "dark": { "cal-brand": "#ffffff" } }, "hideEventTypeDetails": false, "layout": "month_view" });

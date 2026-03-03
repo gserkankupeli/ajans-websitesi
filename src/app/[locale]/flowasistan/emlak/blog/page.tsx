@@ -31,7 +31,7 @@ export default async function EmlakBlogListPage({ params }: PageProps) {
                 {/* Featured Post */}
                 {highlightPost && (
                     <div className="mb-16">
-                        <Link href={`/emlak/blog/${highlightPost.slug}`}>
+                        <Link href={`/flowasistan/emlak/blog/${highlightPost.slug}`}>
                             <MagicCard className="p-0 border-slate-800 bg-slate-800/50 hover:border-blue-500/30 group overflow-hidden flex flex-col md:flex-row items-stretch min-h-[400px]">
                                 <div className="relative w-full md:w-1/2 min-h-[250px] md:min-h-full overflow-hidden">
                                     <NextImage
@@ -78,7 +78,7 @@ export default async function EmlakBlogListPage({ params }: PageProps) {
                 {/* Regular Posts Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {regularPosts.map((post) => (
-                        <Link key={post.slug} href={`/emlak/blog/${post.slug}`} className="block h-full">
+                        <Link key={post.slug} href={`/flowasistan/emlak/blog/${post.slug}`} className="block h-full">
                             <MagicCard className="h-full p-0 flex flex-col items-start text-left bg-slate-800/40 border-slate-800 hover:border-slate-700 overflow-hidden group">
                                 <div className="relative w-full h-48 overflow-hidden z-10 bg-slate-900">
                                     <NextImage
