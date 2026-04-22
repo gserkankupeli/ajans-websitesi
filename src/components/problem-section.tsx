@@ -6,7 +6,7 @@ import { AlertCircle, Clock, Link as LinkIcon, Shuffle } from "lucide-react";
 const symptoms = [
     {
         icon: Shuffle,
-        text: "WhatsApp&apos;tan gelen, formdan gelen, mailden gelen — hiçbiri aynı yerde değil"
+        text: "WhatsApp'tan gelen, formdan gelen, mailden gelen — hiçbiri aynı yerde değil"
     },
     {
         icon: Clock,

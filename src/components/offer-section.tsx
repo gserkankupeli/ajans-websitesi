@@ -76,7 +76,7 @@ export function OfferSection() {
                             viewport={{ once: true }}
                             transition={{ delay: 0.5 }}
                             onClick={() => scrollToSection("randevu")}
-                            className="group bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all hover:scale-105 shadow-lg shadow-blue-500/20 flex items-center gap-2"
+                            className="group cursor-pointer bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all hover:scale-105 shadow-lg shadow-blue-500/20 flex items-center gap-2"
                         >
                             <span>30 Dakikada Ne Kazanacağınızı Görün</span>
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
