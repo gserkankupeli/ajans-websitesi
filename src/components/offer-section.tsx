@@ -18,6 +18,24 @@ const steps = [
     }
 ];
 
+const processSteps = [
+    {
+        number: "01",
+        title: "Sizi Tanıyoruz",
+        desc: "İşletmenizde neyin zaman çaldığını, neyin kaybolduğunu anlamak için 30 dakika konuşuyoruz."
+    },
+    {
+        number: "02",
+        title: "Plan Sunuyoruz",
+        desc: "Hangi sistemleri neden kuracağımızı, ne zaman hazır olacağını net bir planla gösteriyoruz."
+    },
+    {
+        number: "03",
+        title: "Kuruyoruz",
+        desc: "Onayladıktan sonra kurulum başlar. Mevcut araçlarınıza entegre çalışır."
+    }
+];
+
 export function OfferSection() {
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
@@ -28,10 +46,38 @@ export function OfferSection() {
 
     return (
         <section className="py-20 md:py-32 bg-gray-50 border-y border-gray-200">
-            <div className="container mx-auto px-4 md:px-6">
-                <div className="flex flex-col md:flex-row items-center gap-12 max-w-5xl mx-auto">
+            <div className="container mx-auto px-4 md:px-6 max-w-5xl mx-auto">
 
-                    {/* Content */}
+                {/* Nasıl Çalışıyoruz */}
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4">
+                        Nasıl Çalışıyoruz?
+                    </h2>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 relative px-4">
+                    <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-gray-200 -z-0" />
+                    {processSteps.map((step, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.2 }}
+                            className="relative z-10 flex flex-col items-center text-center bg-gray-50"
+                        >
+                            <div className="w-16 h-16 rounded-2xl bg-white border border-gray-200 shadow-sm flex items-center justify-center text-xl font-bold text-[#0F172A] mb-6 relative">
+                                {step.number}
+                                {index === 0 && <div className="absolute inset-0 rounded-2xl bg-blue-500/10 animate-pulse" />}
+                            </div>
+                            <h3 className="text-xl font-bold text-[#0F172A] mb-3">{step.title}</h3>
+                            <p className="text-gray-600 text-sm leading-relaxed max-w-xs mx-auto">{step.desc}</p>
+                        </motion.div>
+                    ))}
+                </div>
+
+                {/* 30 Dakika CTA */}
+                <div className="flex flex-col md:flex-row items-center gap-12">
                     <div className="flex-1">
                         <motion.h2
                             initial={{ opacity: 0, y: 10 }}
@@ -41,7 +87,6 @@ export function OfferSection() {
                         >
                             30 Dakika Konuşalım
                         </motion.h2>
-
                         <motion.p
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +96,6 @@ export function OfferSection() {
                         >
                             İşletmenizde hangi süreçleri otomatikleştirebileceğimizi birlikte belirleriz. Somut bir değerlendirme yapıyoruz.
                         </motion.p>
-
                         <div className="space-y-6 mb-10">
                             {steps.map((step, index) => (
                                 <motion.div
@@ -69,7 +113,6 @@ export function OfferSection() {
                                 </motion.div>
                             ))}
                         </div>
-
                         <motion.button
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -83,7 +126,6 @@ export function OfferSection() {
                         </motion.button>
                     </div>
 
-                    {/* Minimal Visual / Icon */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -95,11 +137,11 @@ export function OfferSection() {
                             <div className="absolute inset-0 bg-gradient-to-tr from-blue-50 to-transparent opacity-50" />
                             <FileText className="w-24 h-24 text-blue-600 mb-6 relative z-10" />
                             <h3 className="text-xl font-bold text-[#0F172A] mb-2 relative z-10">Strateji Keşfi</h3>
-                            <p className="text-sm text-gray-500 relative z-10">Potansiyel çözüm yolları</p>
+                            <p className="text-sm text-gray-500 relative z-10">Somut bir değerlendirme</p>
                         </div>
                     </motion.div>
-
                 </div>
+
             </div>
         </section>
     );
