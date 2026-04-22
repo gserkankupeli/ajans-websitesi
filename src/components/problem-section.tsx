@@ -6,19 +6,19 @@ import { AlertCircle, Clock, Link as LinkIcon, Shuffle } from "lucide-react";
 const symptoms = [
     {
         icon: Shuffle,
-        text: “WhatsApp'tan gelen, formdan gelen, mailden gelen — hiçbiri aynı yerde değil”
+        text: "WhatsApp&apos;tan gelen, formdan gelen, mailden gelen — hiçbiri aynı yerde değil"
     },
     {
         icon: Clock,
-        text: “Takip kimin aklındaysa o yapıyor; o gittiğinde süreç duruyor”
+        text: "Takip kimin aklındaysa o yapıyor; o gittiğinde süreç duruyor"
     },
     {
         icon: AlertCircle,
-        text: “Aynı soruya günde on kez cevap veriyorsunuz”
+        text: "Aynı soruya günde on kez cevap veriyorsunuz"
     },
     {
         icon: LinkIcon,
-        text: “Neyi düzelteceğinizi bilmiyorsunuz çünkü hiçbir şey ölçülmüyor”
+        text: "Neyi düzelteceğinizi bilmiyorsunuz çünkü hiçbir şey ölçülmüyor"
     }
 ];
 
