@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 const outcomes = [
-    "Talepler düzenli toplanır ve doğru kişiye yönlenir",
-    "Takip hatırlatmaları ve rutin işler otomatikleşir",
-    "Süreçler standartlaşır, ekip daha hızlı hareket eder",
-    "Yönetim daha net görür, karar almak kolaylaşır"
+    "Gelen her talep doğru kişiye, doğru anda ulaşır",
+    "Takip için kimse kimseyi aramak zorunda kalmaz",
+    "Yeni biri işe başladığında sistemi öğrenmesi günler değil, saatler alır",
+    "Ne kadar iş geldiğini, ne kadarının çözüldüğünü rakamla görürsünüz"
 ];
 
 export function DreamOutcome() {
@@ -17,7 +17,7 @@ export function DreamOutcome() {
                 <div className="max-w-4xl mx-auto text-center">
 
                     <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-12">
-                        Sistem Oturduğunda İşler Daha Akıcı İlerler
+                        Sistem Kurulduğunda Ne Değişir?
                     </h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 text-left">

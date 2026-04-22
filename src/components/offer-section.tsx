@@ -6,15 +6,15 @@ import { ArrowRight, FileText, Search, Target } from "lucide-react";
 const steps = [
     {
         icon: Search,
-        text: "Mevcut süreç ve hedeflerin hızlı analizi"
+        text: "İşletmenizde neyin zaman çaldığını birlikte belirliyoruz"
     },
     {
         icon: Target,
-        text: "Size uygun otomatikleştirme alanlarının belirlenmesi"
+        text: "Hangi süreçlerin otomatikleştirilebileceğini netleştiriyoruz"
     },
     {
         icon: FileText,
-        text: "Yaptığımız görüşmede size özel strateji ve otomasyon planlarının keşfedilmesi"
+        text: "Size özel bir strateji ve uygulama planı çıkarıyoruz"
     }
 ];
 
@@ -39,7 +39,7 @@ export function OfferSection() {
                             viewport={{ once: true }}
                             className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-6"
                         >
-                            Kısa Bir Tanışma Yapalım — Size Özel ‘Yol Haritası’ Çıkaralım
+                            30 Dakika Konuşalım
                         </motion.h2>
 
                         <motion.p
@@ -49,8 +49,7 @@ export function OfferSection() {
                             transition={{ delay: 0.1 }}
                             className="text-lg text-gray-600 mb-10 leading-relaxed"
                         >
-                            Bu görüşme bir tanışma ve ihtiyaç keşfidir. İş modelinizi ve mevcut sürecinizi anlarız,
-                            ardından sektörünüze uygun 2–3 otomatik sistem fikrini netleştiririz.
+                            İşletmenizde hangi süreçleri otomatikleştirebileceğimizi birlikte belirleriz. Somut bir değerlendirme yapıyoruz.
                         </motion.p>
 
                         <div className="space-y-6 mb-10">
@@ -79,7 +78,7 @@ export function OfferSection() {
                             onClick={() => scrollToSection("randevu")}
                             className="group bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all hover:scale-105 shadow-lg shadow-blue-500/20 flex items-center gap-2"
                         >
-                            <span>Kısa Bir Tanışma Planla</span>
+                            <span>30 Dakikada Ne Kazanacağınızı Görün</span>
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </motion.button>
                     </div>

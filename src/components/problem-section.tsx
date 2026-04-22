@@ -6,19 +6,19 @@ import { AlertCircle, Clock, Link as LinkIcon, Shuffle } from "lucide-react";
 const symptoms = [
     {
         icon: Shuffle,
-        text: "Talepler farklı kanallarda dağınık kalır, geri dönüş gecikir"
+        text: “WhatsApp'tan gelen, formdan gelen, mailden gelen — hiçbiri aynı yerde değil”
     },
     {
         icon: Clock,
-        text: "Takip düzeni kişiye bağlı olur, bazı fırsatlar soğur"
+        text: “Takip kimin aklındaysa o yapıyor; o gittiğinde süreç duruyor”
     },
     {
         icon: AlertCircle,
-        text: "Tekrarlayan işler zaman yer, ekip yorulur"
+        text: “Aynı soruya günde on kez cevap veriyorsunuz”
     },
     {
-        icon: LinkIcon, // Using Link icon as a placeholder for 'missing system' concept
-        text: "Net bir sistem olmadığı için “neyi iyileştireceğiz?” belirsiz kalır"
+        icon: LinkIcon,
+        text: “Neyi düzelteceğinizi bilmiyorsunuz çünkü hiçbir şey ölçülmüyor”
     }
 ];
 
@@ -30,12 +30,10 @@ export function ProblemSection() {
 
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-6">
-                            Büyümeyi Yavaşlatan Görünmeyen Kayıplar
+                            Muhtemelen Bunları Yaşıyorsunuz
                         </h2>
                         <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                            Birçok işletmede sorun ‘çalışmamak’ değil; aynı işleri tekrar tekrar yapmak,
-                            takipte dağınıklık ve süreçlerin kişilere bağlı kalması. Bu durum fırsatların
-                            kaçmasına, maliyetin artmasına ve büyümenin yavaşlamasına neden olur.
+                            Sorun tembellik değil. Sorun, ekibinizin zamanını büyütmek yerine yönetmek için harcaması.
                         </p>
                     </div>
 

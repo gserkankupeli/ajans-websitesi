@@ -42,7 +42,7 @@ export function Hero() {
                             transition={{ duration: 0.5, delay: 0.1 }}
                             className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-400"
                         >
-                            Yapay Zekayı Sizin Yerinize Çalışan Bir <span className="text-blue-400">Dijital Ekip Arkadaşı’na</span> Dönüştürelim
+                            Tekrarlayan İşlerinizi <span className="text-blue-400">Otomatikleştiriyoruz</span>
                         </motion.h1>
 
                         {/* Subheading */}
@@ -52,7 +52,7 @@ export function Hero() {
                             transition={{ duration: 0.5, delay: 0.2 }}
                             className="text-lg md:text-xl text-gray-400 mb-8 leading-relaxed max-w-2xl mx-auto md:mx-0"
                         >
-                            Süreçlerinizi kısaca inceliyoruz, işinize ve sektörünüze uygun otomatikleştirme fırsatlarını belirliyoruz ve uygulanabilir bir yol haritası çıkarıyoruz.
+                            Talep takibi, müşteri yanıtları, randevu hatırlatmaları — bunları sizin için çalışan bir sisteme dönüştürüyoruz. Ekibiniz asıl işe odaklanır.
                         </motion.p>
 
                         {/* Bullets */}
@@ -63,9 +63,9 @@ export function Hero() {
                             className="space-y-3 mb-10 max-w-xl mx-auto md:mx-0"
                         >
                             {[
-                                "Tekrarlayan işleri azaltın (ekibiniz asıl işe odaklansın)",
-                                "Talep ve takip sürecini düzene sokun (fırsatlar kaybolmasın)",
-                                "İşinize özel yapay zeka sistemleriyle hız ve verimlilik kazanın"
+                                "Her gün tekrar ettiğiniz işler sistem tarafından halledilir",
+                                "Hiçbir müşteri talebi yanıtsız kalmaz",
+                                "Ekibiniz yönetim işine değil, işin kendisine zaman ayırır"
                             ].map((item, index) => (
                                 <div key={index} className="flex items-start gap-3">
                                     <CheckCircle2 className="w-5 h-5 text-blue-500 mt-0.5 shrink-0" />
@@ -90,13 +90,13 @@ export function Hero() {
                                 >
                                     <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2E8F0_0%,#393BB2_50%,#E2E8F0_100%)]" />
                                     <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-blue-600 px-8 py-2 text-base font-medium text-white backdrop-blur-3xl transition-all group-hover:bg-blue-700 gap-2">
-                                        Kısa Bir Tanışma Planla
+                                        30 Dakikada Ne Kazanacağınızı Görün
                                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                     </span>
                                 </button>
 
                                 <span className="text-sm text-center md:text-center text-gray-500 font-medium tracking-wide mt-3 w-full">
-                                    Tanışma & ihtiyaç keşfi
+                                    Ücretsiz · 30 dakika
                                 </span>
                             </div>
                         </motion.div>

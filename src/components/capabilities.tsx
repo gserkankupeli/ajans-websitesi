@@ -7,31 +7,31 @@ import { cn } from "@/lib/utils";
 const capabilities = [
     {
         title: "Talep & Takip Düzeni",
-        description: "Taleplerin düzenli toplanması ve takip adımlarının netleşmesi.",
+        description: "Nereden gelirse gelsin, her talep aynı sisteme düşer. Hiçbiri kaybolmaz.",
         icon: ListFilter,
         className: "md:col-span-2",
     },
     {
         title: "Randevu & Hatırlatma",
-        description: "Randevu alma ve hatırlatma süreçlerini sadeleştiren çözümler.",
+        description: "Müşteri randevu alır, sistem hatırlatır. Siz takip etmek zorunda kalmazsınız.",
         icon: CalendarClock,
         className: "md:col-span-1",
     },
     {
         title: "Teklif & Hızlandırma",
-        description: "Teklif öncesi bilgi toplama ve süreci hızlandıran sistemler.",
+        description: "Teklif öncesi bilgi toplama otomatik çalışır, süreci hızlandırır.",
         icon: Zap,
         className: "md:col-span-1",
     },
     {
         title: "İç Operasyon",
-        description: "Rutin işler, bildirimler ve görevlerin otomatikleşmesi.",
+        description: "Bildirimleri, görevleri, rutinleri sistem yönetir. Siz sadece sonuçlara bakarsınız.",
         icon: Settings2,
         className: "md:col-span-2",
     },
     {
         title: "Müşteri İletişimi",
-        description: "Sık sorular, yönlendirme ve ilk temas süreçlerinin düzenlenmesi.",
+        description: "Sık gelen sorulara anında yanıt verir, karmaşık olanları size yönlendirir.",
         icon: MessageSquareText,
         className: "md:col-span-3",
     },
@@ -44,10 +44,10 @@ export function CapabilitiesSection() {
 
                 <div className="max-w-3xl mx-auto text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] mb-6 tracking-tight">
-                        İşletmeniz İçin Otomatik Sistemler
+                        Ne Kuruyoruz?
                     </h2>
                     <p className="text-lg text-gray-600">
-                        İhtiyacınıza göre bu modülleri birleştiriyor ve size özel bir sistem kuruyoruz.
+                        Her işletme farklı çalışır. Hangi modüllere ihtiyacınız varsa onları birleştiriyoruz.
                     </p>
                 </div>
 

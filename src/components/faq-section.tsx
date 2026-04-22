@@ -7,23 +7,23 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 const faqs = [
     {
         question: "Her sektör için uygun mu?",
-        answer: "Evet. Biz sektör değil, süreç bazlı ilerleriz. İş modelinize göre en uygun sistemi öneririz."
+        answer: "Evet. Sektöre değil, iş süreçlerine bakıyoruz. Talep takibi, müşteri iletişimi veya rutin operasyonları olan her işletmeyle çalışabiliriz."
     },
     {
         question: "Görüşmeden ne alacağım?",
-        answer: "Görüşme sonunda işletmenizin mevcut durumuna özel fırsatları keşfedeceğimiz ve potansiyel çözüm yollarını netleştireceğimiz net bir stratejik yol haritası (uygulanabilirlik analizi) çizeriz."
+        answer: "İşletmenizde hangi işlerin otomatikleştirilebileceğini, ne kadar zaman kazanabileceğinizi ve nasıl ilerleyebileceğimizi net bir şekilde görürsünüz. Ücretli değil."
     },
     {
         question: "Mevcut sistemlerimiz var, sorun olur mu?",
-        answer: "Hayır. Mevcut işleyişinize göre en az sürtünmeyle ilerleyecek yaklaşımı seçeriz. Mevcut araçlarınıza entegre olabiliriz."
+        answer: "Hayır. Kullandığınız araçlara entegre çalışıyoruz. Her şeyi baştan kurmak zorunda değilsiniz."
     },
     {
         question: "Görüşme ne kadar sürüyor?",
-        answer: "Takvimde göreceğiniz şekilde yaklaşık 30 dakikalık kısa bir tanışma görüşmesidir."
+        answer: "30 dakika. Takvimden istediğiniz saati seçiyorsunuz."
     },
     {
         question: "Yapay zeka yanlış yönlendirirse ne olur?",
-        answer: "Sistemler kurala dayalı kontrol adımlarıyla ilerler. Kritik adımlar onay mekanizmasıyla çalışır; amaç ‘kontrolsüz otomatik cevap’ değil, süreçte hız ve düzen sağlamaktır."
+        answer: "Kritik adımlarda sistem sizin onayınızla ilerler. Tamamen otomasyona bırakılan tek şey rutin ve tekrar eden işlerdir."
     }
 ];
 

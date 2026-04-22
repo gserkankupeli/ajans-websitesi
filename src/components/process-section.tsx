@@ -5,18 +5,18 @@ import { motion } from "framer-motion";
 const steps = [
     {
         number: "01",
-        title: "Tanışma & ihtiyaç keşfi",
-        desc: "Mevcut durumunuzu ve hedeflerinizi anlamak için kısa bir görüşme."
+        title: "Sizi Tanıyoruz",
+        desc: "İşletmenizde neyin zaman çaldığını, neyin kaybolduğunu anlamak için 30 dakika konuşuyoruz."
     },
     {
         number: "02",
-        title: "Öneri Planı ve yol haritası",
-        desc: "Size özel hazırladığımız strateji ve otomasyon planının sunumu."
+        title: "Plan Sunuyoruz",
+        desc: "Hangi sistemleri neden kuracağımızı, ne zaman hazır olacağını net bir planla gösteriyoruz."
     },
     {
         number: "03",
-        title: "Uygunsa uygulama planı",
-        desc: "Onayınız durumunda kurulum ve entegrasyon adımlarının başlaması."
+        title: "Kuruyoruz",
+        desc: "Onayladıktan sonra kurulum başlar. Mevcut araçlarınıza entegre çalışır."
     }
 ];
 
@@ -27,7 +27,7 @@ export function ProcessSection() {
 
                 <div className="max-w-3xl mx-auto text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4">
-                        3 adımda ilerliyoruz
+                        Nasıl Çalışıyoruz?
                     </h2>
                 </div>
 
