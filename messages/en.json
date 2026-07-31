@@ -1,18 +1,301 @@
 {
-    "Navbar": {
-        "features": "Features",
-        "testimonials": "Testimonials",
-        "pricing": "Pricing",
-        "faqs": "FAQs",
-        "login": "Log in",
-        "getStarted": "Get Started"
+  "LanguageSwitcher": {
+    "tr": "TR",
+    "en": "EN"
+  },
+  "Footer": {
+    "contactPrefix": "Questions? Reach us at",
+    "logoAlt": "Flowixy logo"
+  },
+  "Home": {
+    "Nav": {
+      "whatWeDo": "What We Do",
+      "projects": "Our Work",
+      "process": "Process",
+      "faq": "FAQ",
+      "blog": "Blog",
+      "cta": "Book a Quick Intro Call"
     },
     "Hero": {
-        "badge": "v2.0 is now live",
-        "title": "Build your next idea",
-        "titleHighlight": "faster than ever",
-        "description": "Create stunning websites with our modern, responsive template. Perfect for startups, agencies, and SaaS products.",
-        "getStarted": "Get Started",
-        "watchDemo": "Watch Demo"
+      "title": "Put Your Repetitive Work",
+      "titleHighlight": "on Autopilot",
+      "description": "Lead follow-up, customer replies, appointment reminders — we turn them into a system that runs itself, so your team can get back to the work that actually grows the business.",
+      "bullets": [
+        "The tasks you repeat every day get handled for you",
+        "No customer inquiry ever goes unanswered",
+        "Your team spends its time on the work, not on managing the work"
+      ],
+      "cta": "See What You'd Gain in 30 Minutes",
+      "ctaNote": "Free · 30 minutes"
+    },
+    "Problem": {
+      "title": "This Probably Sounds Familiar",
+      "description": "The problem isn't effort. It's that your team spends its time running the business instead of growing it.",
+      "items": [
+        "Requests come in by email, web form, and DM — and none of it lands in one place",
+        "Follow-up happens only when someone remembers, and stops the moment they're out",
+        "You answer the same question ten times a day",
+        "You can't tell what to fix, because nothing is being measured"
+      ]
+    },
+    "Capabilities": {
+      "title": "What We Build",
+      "description": "Every business runs differently. We put together the pieces yours actually needs.",
+      "items": [
+        {
+          "title": "Intake & Follow-Up",
+          "description": "Every request lands in the same system, no matter where it came from. Nothing slips through."
+        },
+        {
+          "title": "Scheduling & Reminders",
+          "description": "Customers book themselves and the system handles reminders. You stop chasing people."
+        },
+        {
+          "title": "Faster Quoting",
+          "description": "The details you need before quoting get collected automatically, so proposals go out sooner."
+        },
+        {
+          "title": "Internal Operations",
+          "description": "Notifications, tasks, and routines run on their own. You just review the results."
+        },
+        {
+          "title": "Customer Communication",
+          "description": "Common questions get answered instantly. Anything complex gets routed straight to your team."
+        }
+      ],
+      "outcomesTitle": "What Changes Once It's Running",
+      "outcomes": [
+        "Every request reaches the right person at the right time",
+        "Nobody has to chase anyone for a status update",
+        "New hires get up to speed in hours instead of days",
+        "You see how much work came in and how much closed, in real numbers"
+      ]
+    },
+    "Proof": {
+      "title": "Here's how it actually works",
+      "description": "No technical detail required. The logic is this simple:",
+      "steps": [
+        {
+          "step": "Input",
+          "desc": "Requests, messages, form submissions"
+        },
+        {
+          "step": "System",
+          "desc": "Organize, track, route"
+        },
+        {
+          "step": "Output",
+          "desc": "Faster responses, cleaner operations"
+        }
+      ]
+    },
+    "Examples": {
+      "title": "Our Work",
+      "flowasistanDescription": "An AI-powered system that pulls customer communication and follow-up into a single flow.",
+      "flowasistanBullets": [
+        "Answers and routes incoming requests",
+        "Keeps follow-up on schedule",
+        "Logs and reports around your process"
+      ],
+      "flowasistanNote": "We'll walk through examples from your industry on the call.",
+      "comingSoon": "Coming soon",
+      "contentTitle": "AI Content Production",
+      "contentDescription": "An assistant that writes copy and campaign concepts in your brand's own voice.",
+      "workflowTitle": "Workflow & Process Automation",
+      "workflowDescription": "Putting time-consuming manual tasks and tangled operational steps on autopilot."
+    },
+    "Offer": {
+      "processTitle": "How We Work",
+      "processSteps": [
+        {
+          "title": "We Get to Know You",
+          "desc": "A 30-minute conversation to find out where your time goes and what falls through the cracks."
+        },
+        {
+          "title": "We Bring a Plan",
+          "desc": "We lay out exactly what we'd build, why it matters, and when it would be ready."
+        },
+        {
+          "title": "We Build It",
+          "desc": "Once you approve, we start. It plugs into the tools you already use."
+        }
+      ],
+      "ctaTitle": "Let's Talk for 30 Minutes",
+      "ctaDescription": "We'll work out together which parts of your business can be automated. You leave with a concrete assessment.",
+      "steps": [
+        "We pinpoint what's eating your team's time",
+        "We clarify which processes can realistically be automated",
+        "You get a strategy and rollout plan built for your business"
+      ],
+      "cta": "See What You'd Gain in 30 Minutes",
+      "cardTitle": "Strategy Session",
+      "cardSubtitle": "A concrete assessment"
+    },
+    "FAQ": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "Does this work for my industry?",
+          "answer": "Yes. We look at processes, not industries. If your business handles inquiries, customer communication, or routine operations, we can work together."
+        },
+        {
+          "question": "What do I get out of the call?",
+          "answer": "You'll see clearly which parts of your work can be automated, how much time you'd get back, and what moving forward would look like. There's no charge."
+        },
+        {
+          "question": "We already have systems in place. Is that a problem?",
+          "answer": "Not at all. We integrate with the tools you already use. You don't have to rebuild anything from scratch."
+        },
+        {
+          "question": "How long is the call?",
+          "answer": "30 minutes. You pick whatever time works from the calendar."
+        },
+        {
+          "question": "What happens if the AI gets something wrong?",
+          "answer": "Critical steps always wait for your approval. The only things left fully automated are routine, repetitive tasks."
+        }
+      ]
+    },
+    "Booking": {
+      "title": "Find Out What AI Automation Could Do for Your Business",
+      "description": "Let's have a short intro call. We'll listen to how you work today and put together a roadmap built around it."
+    },
+    "Meta": {
+      "title": "Flowixy — Automated Systems Built Around Your Business",
+      "description": "We turn lead follow-up, customer replies, and routine operations into systems that run themselves."
     }
+  },
+  "FlowAsistan": {
+    "Nav": {
+      "howItWorks": "How It Works",
+      "features": "Features",
+      "faq": "FAQ",
+      "blog": "Blog",
+      "backToProduct": "Back to FlowAsistan",
+      "cta": "Book a Quick Intro Call"
+    },
+    "Hero": {
+      "titleStart": "Answer Every Call and Message",
+      "titleHighlight": "24/7, Automatically",
+      "titleEnd": " — Then Track and Qualify Every Lead From One Dashboard",
+      "description": "FlowAsistan is an AI assistant that picks up phone calls and responds to messages from channels like WhatsApp and Instagram the moment they arrive. Whenever you want to check in, you open the FlowAsistan dashboard and see every conversation and live stats in one place.",
+      "bullets": [
+        "24/7 automated response — calls and messages",
+        "One dashboard for tracking and order",
+        "Live stats and analytics"
+      ],
+      "cta": "Book a Quick Intro Call",
+      "ctaNote": "30-min intro & needs assessment • Live demo if it's a fit"
+    },
+    "Problem": {
+      "title": "The Losses You Don't See Are Slowing You Down",
+      "description": "In most businesses the problem isn't effort. It's missed calls and messages, follow-up scattered across channels, and performance nobody is measuring — which leaves opportunities to go cold and your team burning time.",
+      "items": [
+        "Slow replies to calls and messages → opportunities slip away",
+        "Scattered channels → follow-up breaks down",
+        "The same questions over and over → your team burns out",
+        "No measurement → no idea what to improve"
+      ],
+      "cta": "Book a Quick Intro Call"
+    },
+    "HowItWorks": {
+      "title": "FlowAsistan in Three Steps",
+      "steps": [
+        {
+          "title": "Respond",
+          "desc": "Answers messages and calls automatically, around the clock."
+        },
+        {
+          "title": "Capture",
+          "desc": "Logs every request in one place and keeps follow-up on track."
+        },
+        {
+          "title": "Measure",
+          "desc": "Makes performance visible with live stats."
+        }
+      ]
+    },
+    "Features": {
+      "titleLine1": "Automated Response,",
+      "titleHighlight": "Shaped Around Your Business",
+      "description": "FlowAsistan pulls communication from every channel into a single flow and runs the way your business does.",
+      "items": [
+        {
+          "title": "Message Response",
+          "description": "Automatically responds to messages from channels like WhatsApp and Instagram."
+        },
+        {
+          "title": "Call Answering",
+          "description": "Picks up and routes phone calls automatically."
+        },
+        {
+          "title": "Instant Answers",
+          "description": "Handles the questions customers ask most and points them to the right place."
+        },
+        {
+          "title": "Lead Qualification",
+          "description": "Separates qualified leads from the rest so your team stays focused."
+        },
+        {
+          "title": "One Dashboard",
+          "description": "Every channel and every customer request logged and tracked in a single dashboard."
+        },
+        {
+          "title": "Live Analytics",
+          "description": "Real-time performance analytics and conversation summaries."
+        }
+      ]
+    },
+    "Proof": {
+      "title": "What You See in the Dashboard",
+      "description": "Sample metrics — yours will look different:",
+      "metrics": [
+        { "label": "Calls", "value": "1,254" },
+        { "label": "Messages", "value": "8,432" },
+        { "label": "Requests", "value": "845" },
+        { "label": "Avg. call length", "value": "1m 45s" },
+        { "label": "Conversion", "value": "14%" }
+      ],
+      "scenario": "\"A customer called or sent a message → FlowAsistan responded automatically → collected the details that mattered → logged the request in one dashboard → and you reviewed the results and stats whenever it suited you.\""
+    },
+    "Meeting": {
+      "title": "Get Clarity in 30 Minutes",
+      "description": "On a short intro call we'll listen to how you work today and map out exactly how FlowAsistan would run in your business. If it's a fit, we'll show you a live demo right there.",
+      "items": [
+        "Where's the biggest bottleneck?",
+        "How should automated response be set up?",
+        "A live demo, if it's a fit"
+      ],
+      "cta": "Book a Quick Intro Call"
+    },
+    "FAQ": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Is this actually automated?",
+          "answer": "Yes. Calls and messages are handled automatically. You just open the dashboard whenever you want to check in."
+        },
+        {
+          "question": "What happens if something gets routed to the wrong place?",
+          "answer": "Critical steps run through control checks, and routing and hand-off rules are configured to your preferences."
+        },
+        {
+          "question": "Which channels does it work with?",
+          "answer": "Message channels like WhatsApp and Instagram, plus phone calls — set up around what your business actually uses."
+        },
+        {
+          "question": "How long is the call?",
+          "answer": "A 30-minute intro and needs assessment."
+        }
+      ]
+    },
+    "Booking": {
+      "title": "Book a Quick Intro Call",
+      "description": "Tell us how you work today, and we'll map out how FlowAsistan would run it for you."
+    },
+    "Meta": {
+      "title": "FlowAsistan — Automated Call and Message Response, 24/7",
+      "description": "FlowAsistan is an AI assistant that answers calls and messages around the clock, collects every request in one dashboard, and shows performance with live stats."
+    }
+  }
 }

@@ -1,60 +1,35 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { ListFilter, CalendarClock, Zap, Settings2, MessageSquareText, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const capabilities = [
-    {
-        title: "Talep & Takip Düzeni",
-        description: "Nereden gelirse gelsin, her talep aynı sisteme düşer. Hiçbiri kaybolmaz.",
-        icon: ListFilter,
-        className: "md:col-span-2",
-    },
-    {
-        title: "Randevu & Hatırlatma",
-        description: "Müşteri randevu alır, sistem hatırlatır. Siz takip etmek zorunda kalmazsınız.",
-        icon: CalendarClock,
-        className: "md:col-span-1",
-    },
-    {
-        title: "Teklif & Hızlandırma",
-        description: "Teklif öncesi bilgi toplama otomatik çalışır, süreci hızlandırır.",
-        icon: Zap,
-        className: "md:col-span-1",
-    },
-    {
-        title: "İç Operasyon",
-        description: "Bildirimleri, görevleri, rutinleri sistem yönetir. Siz sadece sonuçlara bakarsınız.",
-        icon: Settings2,
-        className: "md:col-span-2",
-    },
-    {
-        title: "Müşteri İletişimi",
-        description: "Sık gelen sorulara anında yanıt verir, karmaşık olanları size yönlendirir.",
-        icon: MessageSquareText,
-        className: "md:col-span-3",
-    },
-];
-
-const outcomes = [
-    "Gelen her talep doğru kişiye, doğru anda ulaşır",
-    "Takip için kimse kimseyi aramak zorunda kalmaz",
-    "Yeni biri işe başladığında sistemi öğrenmesi günler değil, saatler alır",
-    "Ne kadar iş geldiğini, ne kadarının çözüldüğünü rakamla görürsünüz"
+const layout = [
+    { icon: ListFilter, className: "md:col-span-2" },
+    { icon: CalendarClock, className: "md:col-span-1" },
+    { icon: Zap, className: "md:col-span-1" },
+    { icon: Settings2, className: "md:col-span-2" },
+    { icon: MessageSquareText, className: "md:col-span-3" },
 ];
 
 export function CapabilitiesSection() {
+    const t = useTranslations("Home.Capabilities");
+    const capabilities = (t.raw("items") as { title: string; description: string }[]).map(
+        (item, i) => ({ ...item, ...layout[i] })
+    );
+    const outcomes = t.raw("outcomes") as string[];
+
     return (
         <section id="neler-yapiyoruz" className="py-20 md:py-32 bg-slate-50">
             <div className="container mx-auto px-4 md:px-6">
 
                 <div className="max-w-3xl mx-auto text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] mb-6 tracking-tight">
-                        Ne Kuruyoruz?
+                        {t("title")}
                     </h2>
                     <p className="text-lg text-gray-600">
-                        Her işletme farklı çalışır. Hangi modüllere ihtiyacınız varsa onları birleştiriyoruz.
+                        {t("description")}
                     </p>
                 </div>
 
@@ -86,7 +61,7 @@ export function CapabilitiesSection() {
                 {/* Outcomes */}
                 <div className="max-w-4xl mx-auto">
                     <h3 className="text-2xl md:text-3xl font-bold text-[#0F172A] text-center mb-10">
-                        Sistem Kurulduğunda Ne Değişir?
+                        {t("outcomesTitle")}
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
                         {outcomes.map((item, index) => (

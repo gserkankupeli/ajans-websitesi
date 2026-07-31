@@ -1,18 +1,301 @@
 {
-  "Navbar": {
-    "features": "Özellikler",
-    "testimonials": "Referanslar",
-    "pricing": "Fiyatlandırma",
-    "faqs": "SSS",
-    "login": "Giriş Yap",
-    "getStarted": "Hemen Başla"
+  "LanguageSwitcher": {
+    "tr": "TR",
+    "en": "EN"
   },
-  "Hero": {
-    "badge": "v2.0 yayında",
-    "title": "Bir sonraki fikrini",
-    "titleHighlight": "hiç olmadığı kadar hızlı geliştir",
-    "description": "Modern ve responsive şablonumuzla harika web siteleri oluşturun. Girişimler, ajanslar ve SaaS ürünleri için mükemmel.",
-    "getStarted": "Hemen Başla",
-    "watchDemo": "Demoyu İzle"
+  "Footer": {
+    "contactPrefix": "Bir sorunuz olursa:",
+    "logoAlt": "Flowixy Logo"
+  },
+  "Home": {
+    "Nav": {
+      "whatWeDo": "Neler Yapıyoruz",
+      "projects": "Projeler",
+      "process": "Süreç",
+      "faq": "Sık Sorulan Sorular",
+      "blog": "Blog",
+      "cta": "Kısa Bir Tanışma Planla"
+    },
+    "Hero": {
+      "title": "Tekrarlayan İşlerinizi",
+      "titleHighlight": "Otomatikleştiriyoruz",
+      "description": "Talep takibi, müşteri yanıtları, randevu hatırlatmaları — bunları sizin için çalışan bir sisteme dönüştürüyoruz. Ekibiniz asıl işe odaklanır.",
+      "bullets": [
+        "Her gün tekrar ettiğiniz işler sistem tarafından halledilir",
+        "Hiçbir müşteri talebi yanıtsız kalmaz",
+        "Ekibiniz yönetim işine değil, işin kendisine zaman ayırır"
+      ],
+      "cta": "30 Dakikada Ne Kazanacağınızı Görün",
+      "ctaNote": "Ücretsiz · 30 dakika"
+    },
+    "Problem": {
+      "title": "Muhtemelen Bunları Yaşıyorsunuz",
+      "description": "Sorun tembellik değil. Sorun, ekibinizin zamanını büyütmek yerine yönetmek için harcaması.",
+      "items": [
+        "WhatsApp'tan gelen, formdan gelen, mailden gelen — hiçbiri aynı yerde değil",
+        "Takip kimin aklındaysa o yapıyor; o gittiğinde süreç duruyor",
+        "Aynı soruya günde on kez cevap veriyorsunuz",
+        "Neyi düzelteceğinizi bilmiyorsunuz çünkü hiçbir şey ölçülmüyor"
+      ]
+    },
+    "Capabilities": {
+      "title": "Ne Kuruyoruz?",
+      "description": "Her işletme farklı çalışır. Hangi modüllere ihtiyacınız varsa onları birleştiriyoruz.",
+      "items": [
+        {
+          "title": "Talep & Takip Düzeni",
+          "description": "Nereden gelirse gelsin, her talep aynı sisteme düşer. Hiçbiri kaybolmaz."
+        },
+        {
+          "title": "Randevu & Hatırlatma",
+          "description": "Müşteri randevu alır, sistem hatırlatır. Siz takip etmek zorunda kalmazsınız."
+        },
+        {
+          "title": "Teklif & Hızlandırma",
+          "description": "Teklif öncesi bilgi toplama otomatik çalışır, süreci hızlandırır."
+        },
+        {
+          "title": "İç Operasyon",
+          "description": "Bildirimleri, görevleri, rutinleri sistem yönetir. Siz sadece sonuçlara bakarsınız."
+        },
+        {
+          "title": "Müşteri İletişimi",
+          "description": "Sık gelen sorulara anında yanıt verir, karmaşık olanları size yönlendirir."
+        }
+      ],
+      "outcomesTitle": "Sistem Kurulduğunda Ne Değişir?",
+      "outcomes": [
+        "Gelen her talep doğru kişiye, doğru anda ulaşır",
+        "Takip için kimse kimseyi aramak zorunda kalmaz",
+        "Yeni biri işe başladığında sistemi öğrenmesi günler değil, saatler alır",
+        "Ne kadar iş geldiğini, ne kadarının çözüldüğünü rakamla görürsünüz"
+      ]
+    },
+    "Proof": {
+      "title": "Nasıl çalıştığını basitçe gösterelim",
+      "description": "Karışık teknik detaylara girmeden, sürecin mantığı şu şekilde ilerler:",
+      "steps": [
+        {
+          "step": "Girdi",
+          "desc": "Talepler / mesajlar / formlar"
+        },
+        {
+          "step": "Sistem",
+          "desc": "Düzenleme + takip + yönlendirme"
+        },
+        {
+          "step": "Çıktı",
+          "desc": "Daha hızlı dönüş, daha düzenli yönetim"
+        }
+      ]
+    },
+    "Examples": {
+      "title": "Projelerimiz",
+      "flowasistanDescription": "Müşteri iletişimi + takip sürecini tek akışta toplayan yapay zeka destekli sistem.",
+      "flowasistanBullets": [
+        "Talepleri karşılar ve yönlendirir",
+        "Takip adımlarını düzenler",
+        "Sürece göre kayıt/raporlama"
+      ],
+      "flowasistanNote": "Detayları görüşmede sektörünüze göre örnekleyelim.",
+      "comingSoon": "Yakında",
+      "contentTitle": "Yapay Zeka ile İçerik Üretimi",
+      "contentDescription": "Markanıza özel dil yapısına uygun otomatik metin ve stratejik senaryo üretim asistanı.",
+      "workflowTitle": "Verimlilik & İş Süreçleri Otomasyonu",
+      "workflowDescription": "Zaman alan manuel görevlerin ve karmaşık operasyonel adımların otopilota bağlanması."
+    },
+    "Offer": {
+      "processTitle": "Nasıl Çalışıyoruz?",
+      "processSteps": [
+        {
+          "title": "Sizi Tanıyoruz",
+          "desc": "İşletmenizde neyin zaman çaldığını, neyin kaybolduğunu anlamak için 30 dakika konuşuyoruz."
+        },
+        {
+          "title": "Plan Sunuyoruz",
+          "desc": "Hangi sistemleri neden kuracağımızı, ne zaman hazır olacağını net bir planla gösteriyoruz."
+        },
+        {
+          "title": "Kuruyoruz",
+          "desc": "Onayladıktan sonra kurulum başlar. Mevcut araçlarınıza entegre çalışır."
+        }
+      ],
+      "ctaTitle": "30 Dakika Konuşalım",
+      "ctaDescription": "İşletmenizde hangi süreçleri otomatikleştirebileceğimizi birlikte belirleriz. Somut bir değerlendirme yapıyoruz.",
+      "steps": [
+        "İşletmenizde neyin zaman çaldığını birlikte belirliyoruz",
+        "Hangi süreçlerin otomatikleştirilebileceğini netleştiriyoruz",
+        "Size özel bir strateji ve uygulama planı çıkarıyoruz"
+      ],
+      "cta": "30 Dakikada Ne Kazanacağınızı Görün",
+      "cardTitle": "Strateji Keşfi",
+      "cardSubtitle": "Somut bir değerlendirme"
+    },
+    "FAQ": {
+      "title": "Sık sorulan sorular",
+      "items": [
+        {
+          "question": "Her sektör için uygun mu?",
+          "answer": "Evet. Sektöre değil, iş süreçlerine bakıyoruz. Talep takibi, müşteri iletişimi veya rutin operasyonları olan her işletmeyle çalışabiliriz."
+        },
+        {
+          "question": "Görüşmeden ne alacağım?",
+          "answer": "İşletmenizde hangi işlerin otomatikleştirilebileceğini, ne kadar zaman kazanabileceğinizi ve nasıl ilerleyebileceğimizi net bir şekilde görürsünüz. Ücretli değil."
+        },
+        {
+          "question": "Mevcut sistemlerimiz var, sorun olur mu?",
+          "answer": "Hayır. Kullandığınız araçlara entegre çalışıyoruz. Her şeyi baştan kurmak zorunda değilsiniz."
+        },
+        {
+          "question": "Görüşme ne kadar sürüyor?",
+          "answer": "30 dakika. Takvimden istediğiniz saati seçiyorsunuz."
+        },
+        {
+          "question": "Yapay zeka yanlış yönlendirirse ne olur?",
+          "answer": "Kritik adımlarda sistem sizin onayınızla ilerler. Tamamen otomasyona bırakılan tek şey rutin ve tekrar eden işlerdir."
+        }
+      ]
+    },
+    "Booking": {
+      "title": "Sektörünüze Uygun Yapay Zeka Destekli Otomasyon Sistemleri Hakkında Fikir Alın",
+      "description": "Kısa bir tanışma yapalım. Mevcut sürecinizi dinleyip size özel Yol Haritası hazırlayalım."
+    },
+    "Meta": {
+      "title": "Flowixy — İşletmenize Özel Otomatik Sistemler",
+      "description": "Talep takibi, müşteri yanıtları ve rutin operasyonları sizin için çalışan sistemlere dönüştürüyoruz."
+    }
+  },
+  "FlowAsistan": {
+    "Nav": {
+      "howItWorks": "Nasıl Çalışır?",
+      "features": "Özellikler",
+      "faq": "SSS",
+      "blog": "Blog",
+      "backToProduct": "FlowAsistan'a Dön",
+      "cta": "Kısa Bir Tanışma Planla"
+    },
+    "Hero": {
+      "titleStart": "Mesajları Ve Çağrıları",
+      "titleHighlight": "7/24 Otomatik Karşılayın",
+      "titleEnd": "; Tek Panelden Takip Edin Ve Nitelikli Müşteriye Dönüştürün",
+      "description": "Yapay zeka destekli FlowAsistan, WhatsApp ve Instagram gibi kanallardan gelen mesajları ve telefon aramalarını anında karşılar. Siz sadece istediğinizde FlowAsistan Paneli'ne girip takip eder ve canlı istatistikleri görürsünüz.",
+      "bullets": [
+        "7/24 otomatik karşılama (mesaj + arama)",
+        "Tek panelden takip ve düzen",
+        "Canlı istatistik ve analiz"
+      ],
+      "cta": "Kısa Bir Tanışma Planla",
+      "ctaNote": "30 dk tanışma & ihtiyaç analizi • Uygunsa canlı demo"
+    },
+    "Problem": {
+      "title": "Görünmeyen Kayıplar Büyümeyi Yavaşlatır",
+      "description": "Birçok işletmede sorun çalışmamak değil; mesajların ve aramaların kaçması, takibin dağınık olması ve performansın ölçülememesidir. Bu da fırsatların soğumasına ve ekibin zaman kaybetmesine neden olur.",
+      "items": [
+        "Mesajlara/aramalara geç dönüş → fırsatlar kaçar",
+        "Kanallar dağınık → takip aksar",
+        "Tekrarlayan sorular → ekip yorulur",
+        "Ölçüm yok → neyi iyileştireceğiniz belirsiz kalır"
+      ],
+      "cta": "Kısa Bir Tanışma Planla"
+    },
+    "HowItWorks": {
+      "title": "FlowAsistan 3 Adım Sistemi",
+      "steps": [
+        {
+          "title": "Karşıla",
+          "desc": "Mesajları ve aramaları 7/24 otomatik karşılar."
+        },
+        {
+          "title": "Topla",
+          "desc": "Talepleri tek yerde kayıt altına alır ve takip düzeni oluşturur."
+        },
+        {
+          "title": "Ölç",
+          "desc": "Canlı istatistiklerle performansı görünür kılar."
+        }
+      ]
+    },
+    "Features": {
+      "titleLine1": "İşinize Göre Şekillenen",
+      "titleHighlight": "Otomatik Karşılama",
+      "description": "FlowAsistan, farklı kanallardan gelen iletişimi tek akışta toplar ve işletmenize uygun şekilde çalışır.",
+      "items": [
+        {
+          "title": "Mesaj Karşılama",
+          "description": "WhatsApp/Instagram gibi kanallardan gelen mesajları otomatik karşılama."
+        },
+        {
+          "title": "Arama Karşılama",
+          "description": "Telefon aramalarını otomatik karşılama ve yönlendirme."
+        },
+        {
+          "title": "Sık Sorulan Sorular",
+          "description": "Müşterilerinizin sık sorduğu soruları hızlıca yanıtlama ve doğru yönlendirme."
+        },
+        {
+          "title": "Otomatik Filtre",
+          "description": "Talepleri nitelikli ve niteliksiz olarak ayırma, ekibinizin odağını koruma."
+        },
+        {
+          "title": "Tek Panel",
+          "description": "Tüm iletişim kanallarını ve müşteri taleplerini tek panelden kayıt altına alma ve takip düzeni."
+        },
+        {
+          "title": "Canlı İstatistik",
+          "description": "İşletmenizin performansını anlık olarak gösteren analiz ve konuşma özeti paneli."
+        }
+      ]
+    },
+    "Proof": {
+      "title": "Tek Panelde Neleri Görürsünüz?",
+      "description": "Örnek metrikler (işinize göre değişebilir):",
+      "metrics": [
+        { "label": "Kaç çağrı", "value": "1.254" },
+        { "label": "Kaç mesaj", "value": "8.432" },
+        { "label": "Kaç talep", "value": "845" },
+        { "label": "Konuşma süresi", "value": "1dk 45sn" },
+        { "label": "Dönüşüm", "value": "%14" }
+      ],
+      "scenario": "\"Bir müşteri mesaj attı veya aradı → FlowAsistan otomatik karşıladı → gerekli bilgileri topladı → talebi tek panelde kaydetti → siz dilediğinizde sonuçları ve istatistikleri gördünüz.\""
+    },
+    "Meeting": {
+      "title": "30 Dakikada Netleşsin",
+      "description": "Kısa bir tanışmada sürecinizi dinler, FlowAsistan'ın işletmenizde nasıl otomatik çalışacağını netleştiririz. Uygunsa görüşmede canlı demo ile örnekleriz.",
+      "items": [
+        "En büyük tıkanıklık nerede?",
+        "Otomatik karşılama nasıl kurgulanmalı?",
+        "Uygunsa canlı demo ile örnekleyelim"
+      ],
+      "cta": "Kısa Bir Tanışma Planla"
+    },
+    "FAQ": {
+      "title": "Sık Sorulan Sorular",
+      "items": [
+        {
+          "question": "Bu sistem gerçekten otomatik mi?",
+          "answer": "Evet. Mesajlar ve aramalar otomatik karşılanır. Siz sadece dilediğinizde panele girip takip edersiniz."
+        },
+        {
+          "question": "Yanlış yönlendirme olursa ne olur?",
+          "answer": "Kritik adımlarda kontrol mekanizmalarıyla ilerler; işletmenin tercihine göre yönlendirme/aktarım şekli ayarlanır."
+        },
+        {
+          "question": "Hangi kanallarda çalışır?",
+          "answer": "WhatsApp ve Instagram gibi mesaj kanalları ve telefon aramaları dahil, işletmenin ihtiyacına göre çalışır."
+        },
+        {
+          "question": "Görüşme ne kadar sürüyor?",
+          "answer": "30 dakikalık kısa bir tanışma & ihtiyaç analizi görüşmesi."
+        }
+      ]
+    },
+    "Booking": {
+      "title": "Kısa Bir Tanışma Planlayın",
+      "description": "Sürecinizi dinleyelim, FlowAsistan'ın sizin için nasıl otomatik çalışacağını netleştirelim."
+    },
+    "Meta": {
+      "title": "FlowAsistan — 7/24 Otomatik Mesaj ve Çağrı Karşılama",
+      "description": "Yapay zeka destekli FlowAsistan mesajları ve aramaları 7/24 karşılar, talepleri tek panelde toplar ve performansı canlı istatistiklerle gösterir."
+    }
   }
 }

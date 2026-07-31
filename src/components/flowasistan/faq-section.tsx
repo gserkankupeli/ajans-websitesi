@@ -2,28 +2,12 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
-const faqs = [
-    {
-        question: "Bu sistem gerçekten otomatik mi?",
-        answer: "Evet. Mesajlar ve aramalar otomatik karşılanır. Siz sadece dilediğinizde panele girip takip edersiniz."
-    },
-    {
-        question: "Yanlış yönlendirme olursa ne olur?",
-        answer: "Kritik adımlarda kontrol mekanizmalarıyla ilerler; işletmenin tercihine göre yönlendirme/aktarım şekli ayarlanır."
-    },
-    {
-        question: "Hangi kanallarda çalışır?",
-        answer: "WhatsApp ve Instagram gibi mesaj kanalları ve telefon aramaları dahil, işletmenin ihtiyacına göre çalışır."
-    },
-    {
-        question: "Görüşme ne kadar sürüyor?",
-        answer: "30 dakikalık kısa bir tanışma & ihtiyaç analizi görüşmesi."
-    }
-];
-
 export function FlowAsistanFAQSection() {
+    const t = useTranslations("FlowAsistan.FAQ");
+    const faqs = t.raw("items") as { question: string; answer: string }[];
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
@@ -32,7 +16,7 @@ export function FlowAsistanFAQSection() {
 
                 <div className="max-w-2xl mx-auto text-center mb-12">
                     <h2 className="text-3xl md:text-3xl font-bold text-[#0F172A] mb-4">
-                        Sık Sorulan Sorular
+                        {t("title")}
                     </h2>
                 </div>
 

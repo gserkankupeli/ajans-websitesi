@@ -1,17 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { PhoneCall, MessageCircle, FileText, Clock, TrendingUp } from "lucide-react";
 
-const metrics = [
-    { label: "Kaç çağrı", icon: PhoneCall, value: "1,254" },
-    { label: "Kaç mesaj", icon: MessageCircle, value: "8,432" },
-    { label: "Kaç talep", icon: FileText, value: "845" },
-    { label: "Konuşma süresi", icon: Clock, value: "1dk 45sn" },
-    { label: "Dönüşüm", icon: TrendingUp, value: "%14" },
-];
+const icons = [PhoneCall, MessageCircle, FileText, Clock, TrendingUp];
 
 export function FlowAsistanProofSection() {
+    const t = useTranslations("FlowAsistan.Proof");
+    const metrics = (t.raw("metrics") as { label: string; value: string }[]).map(
+        (metric, i) => ({ ...metric, icon: icons[i] })
+    );
+
     return (
         <section className="py-20 md:py-32 bg-gray-50 border-t border-gray-100">
             <div className="container mx-auto px-4 md:px-6">
@@ -19,10 +19,10 @@ export function FlowAsistanProofSection() {
                 {/* Header */}
                 <div className="max-w-3xl mx-auto mb-16 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-6">
-                        Tek Panelde Neleri Görürsünüz?
+                        {t("title")}
                     </h2>
                     <p className="text-lg text-gray-600 mb-2">
-                        Örnek metrikler (işinize göre değişebilir):
+                        {t("description")}
                     </p>
                 </div>
 
@@ -51,7 +51,7 @@ export function FlowAsistanProofSection() {
                             <TrendingUp className="w-8 h-8 text-blue-600" />
                         </div>
                         <p className="text-lg text-gray-700 leading-relaxed font-medium">
-                            “Bir müşteri mesaj attı veya aradı <span className="text-blue-500">→</span> FlowAsistan otomatik karşıladı <span className="text-blue-500">→</span> gerekli bilgileri topladı <span className="text-blue-500">→</span> talebi tek panelde kaydetti <span className="text-blue-500">→</span> siz dilediğinizde sonuçları ve istatistikleri gördünüz.”
+                            {t("scenario")}
                         </p>
                     </div>
                 </div>

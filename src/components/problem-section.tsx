@@ -1,28 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { AlertCircle, Clock, Link as LinkIcon, Shuffle } from "lucide-react";
 
-const symptoms = [
-    {
-        icon: Shuffle,
-        text: "WhatsApp'tan gelen, formdan gelen, mailden gelen — hiçbiri aynı yerde değil"
-    },
-    {
-        icon: Clock,
-        text: "Takip kimin aklındaysa o yapıyor; o gittiğinde süreç duruyor"
-    },
-    {
-        icon: AlertCircle,
-        text: "Aynı soruya günde on kez cevap veriyorsunuz"
-    },
-    {
-        icon: LinkIcon,
-        text: "Neyi düzelteceğinizi bilmiyorsunuz çünkü hiçbir şey ölçülmüyor"
-    }
-];
+const icons = [Shuffle, Clock, AlertCircle, LinkIcon];
 
 export function ProblemSection() {
+    const t = useTranslations("Home.Problem");
+    const symptoms = (t.raw("items") as string[]).map((text, i) => ({
+        icon: icons[i],
+        text
+    }));
+
     return (
         <section className="py-20 md:py-32 bg-gray-50 border-t border-gray-100">
             <div className="container mx-auto px-4 md:px-6">
@@ -30,10 +20,10 @@ export function ProblemSection() {
 
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-6">
-                            Muhtemelen Bunları Yaşıyorsunuz
+                            {t("title")}
                         </h2>
                         <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                            Sorun tembellik değil. Sorun, ekibinizin zamanını büyütmek yerine yönetmek için harcaması.
+                            {t("description")}
                         </p>
                     </div>
 

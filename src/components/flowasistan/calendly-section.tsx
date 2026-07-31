@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 export function FlowAsistanCalendlySection() {
+    const t = useTranslations("FlowAsistan.Booking");
 
     useEffect(() => {
         (function (C: any, A: string, L: string) {
@@ -51,10 +53,10 @@ export function FlowAsistanCalendlySection() {
 
                 <div className="max-w-3xl mx-auto text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                        Kısa Bir Tanışma Planlayın
+                        {t("title")}
                     </h2>
                     <p className="text-lg text-gray-300 mb-8">
-                        Sürecinizi dinleyelim, FlowAsistan’ın sizin için nasıl otomatik çalışacağını netleştirelim.
+                        {t("description")}
                     </p>
                 </div>
 

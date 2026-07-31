@@ -1,24 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+import { useRouter } from "@/i18n/routing";
 import { ArrowRight, Clock, FileText } from "lucide-react";
 import NextImage from "next/image";
 
 export function ExamplesSection() {
+    const t = useTranslations("Home.Examples");
+    const router = useRouter();
+    const flowasistanBullets = t.raw("flowasistanBullets") as string[];
+
     return (
         <section id="ornekler" className="py-20 md:py-32 bg-white">
             <div className="container mx-auto px-4 md:px-6">
 
                 <div className="max-w-3xl mx-auto text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4">
-                        Projelerimiz
+                        {t("title")}
                     </h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
                     {/* Main Example Card */}
-                    <div className="md:col-span-1 h-full block group cursor-pointer" onClick={() => window.location.href = '/flowasistan'}>
+                    <div className="md:col-span-1 h-full block group cursor-pointer" onClick={() => router.push("/flowasistan")}>
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -35,15 +41,11 @@ export function ExamplesSection() {
                                 </div>
                                 <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors">FlowAsistan</h3>
                                 <p className="text-gray-300 text-sm leading-relaxed mb-6">
-                                    Müşteri iletişimi + takip sürecini tek akışta toplayan yapay zeka destekli sistem.
+                                    {t("flowasistanDescription")}
                                 </p>
 
                                 <ul className="space-y-3 mb-8">
-                                    {[
-                                        "Talepleri karşılar ve yönlendirir",
-                                        "Takip adımlarını düzenler",
-                                        "Sürece göre kayıt/raporlama"
-                                    ].map((item, i) => (
+                                    {flowasistanBullets.map((item, i) => (
                                         <li key={i} className="flex items-center gap-2 text-sm text-gray-400">
                                             <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
                                             {item}
@@ -53,7 +55,7 @@ export function ExamplesSection() {
                             </div>
 
                             <div className="text-xs text-blue-300/80 bg-blue-900/40 p-3 rounded-lg border border-blue-800 mt-auto group-hover:bg-blue-900/60 transition-colors">
-                                Detayları görüşmede sektörünüze göre örnekleyelim.
+                                {t("flowasistanNote")}
                             </div>
                         </motion.div>
                     </div>
@@ -71,11 +73,11 @@ export function ExamplesSection() {
                                 <Clock className="w-6 h-6 text-gray-400" />
                             </div>
                             <div className="flex items-center gap-2 mb-2">
-                                <h3 className="text-xl font-bold text-gray-900">Yapay Zeka ile İçerik Üretimi</h3>
-                                <span className="text-[10px] font-bold uppercase tracking-wider bg-gray-200 text-gray-600 px-2 py-0.5 rounded">Yakında</span>
+                                <h3 className="text-xl font-bold text-gray-900">{t("contentTitle")}</h3>
+                                <span className="text-[10px] font-bold uppercase tracking-wider bg-gray-200 text-gray-600 px-2 py-0.5 rounded">{t("comingSoon")}</span>
                             </div>
                             <p className="text-gray-500 text-sm leading-relaxed">
-                                Markanıza özel dil yapısına uygun otomatik metin ve stratejik senaryo üretim asistanı.
+                                {t("contentDescription")}
                             </p>
                         </div>
                     </motion.div>
@@ -93,11 +95,11 @@ export function ExamplesSection() {
                                 <FileText className="w-6 h-6 text-gray-400" />
                             </div>
                             <div className="flex items-center gap-2 mb-2">
-                                <h3 className="text-lg font-bold text-gray-900 leading-tight">Verimlilik & İş Süreçleri Otomasyonu</h3>
-                                <span className="text-[10px] font-bold uppercase tracking-wider bg-gray-200 text-gray-600 px-2 py-0.5 rounded shrink-0">Yakında</span>
+                                <h3 className="text-lg font-bold text-gray-900 leading-tight">{t("workflowTitle")}</h3>
+                                <span className="text-[10px] font-bold uppercase tracking-wider bg-gray-200 text-gray-600 px-2 py-0.5 rounded shrink-0">{t("comingSoon")}</span>
                             </div>
                             <p className="text-gray-500 text-sm leading-relaxed">
-                                Zaman alan manuel görevlerin ve karmaşık operasyonel adımların otopilota bağlanması.
+                                {t("workflowDescription")}
                             </p>
                         </div>
                     </motion.div>

@@ -6,10 +6,14 @@ export const routing = defineRouting({
     locales: ['en', 'tr'],
 
     // Used when no locale matches
-    defaultLocale: 'tr'
+    defaultLocale: 'tr',
+
+    // Tarayıcı dili Türkçe değilse ziyaretçi otomatik /en'e düşer.
+    // Seçim NEXT_LOCALE çerezinde saklanır; dil değiştirici bunu ezer.
+    localeDetection: true
 });
 
 // Lightweight wrappers around Next.js' navigation APIs
 // that will consider the routing configuration
-export const { Link, redirect, usePathname, useRouter } =
+export const { Link, redirect, usePathname, useRouter, getPathname } =
     createNavigation(routing);

@@ -1,37 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { MessageSquare, Database, LineChart } from "lucide-react";
 
-const steps = [
-    {
-        number: "01",
-        title: "Karşıla",
-        desc: "Mesajları ve aramaları 7/24 otomatik karşılar.",
-        icon: MessageSquare
-    },
-    {
-        number: "02",
-        title: "Topla",
-        desc: "Talepleri tek yerde kayıt altına alır ve takip düzeni oluşturur.",
-        icon: Database
-    },
-    {
-        number: "03",
-        title: "Ölç",
-        desc: "Canlı istatistiklerle performansı görünür kılar.",
-        icon: LineChart
-    }
-];
+const icons = [MessageSquare, Database, LineChart];
 
 export function FlowAsistanHowItWorks() {
+    const t = useTranslations("FlowAsistan.HowItWorks");
+    const steps = (t.raw("steps") as { title: string; desc: string }[]).map((step, i) => ({
+        ...step,
+        number: `0${i + 1}`,
+        icon: icons[i]
+    }));
+
     return (
         <section id="nasil" className="py-20 md:py-32 bg-white border-y border-gray-100">
             <div className="container mx-auto px-4 md:px-6">
 
                 <div className="max-w-3xl mx-auto text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4">
-                        FlowAsistan 3 Adım Sistemi
+                        {t("title")}
                     </h2>
                 </div>
 

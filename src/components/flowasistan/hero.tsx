@@ -1,17 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import NextImage from "next/image";
 import { Spotlight } from "@/components/ui/spotlight";
 
 export function FlowAsistanHero() {
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
+    const t = useTranslations("FlowAsistan.Hero");
+    const bullets = t.raw("bullets") as string[];
 
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
@@ -43,7 +40,7 @@ export function FlowAsistanHero() {
                             transition={{ duration: 0.5, delay: 0.1 }}
                             className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-[1.1] mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-400"
                         >
-                            Mesajları Ve Çağrıları <span className="text-blue-400">7/24 Otomatik Karşılayın</span>; Tek Panelden Takip Edin Ve Nitelikli Müşteriye Dönüştürün
+                            {t("titleStart")} <span className="text-blue-400">{t("titleHighlight")}</span>{t("titleEnd")}
                         </motion.h1>
 
                         {/* Subheading */}
@@ -53,7 +50,7 @@ export function FlowAsistanHero() {
                             transition={{ duration: 0.5, delay: 0.2 }}
                             className="text-lg md:text-xl text-gray-400 mb-8 leading-relaxed max-w-2xl mx-auto md:mx-0"
                         >
-                            Yapay zeka destekli FlowAsistan, WhatsApp ve Instagram gibi kanallardan gelen mesajları ve telefon aramalarını anında karşılar. Siz sadece istediğinizde FlowAsistan Paneli’ne girip takip eder ve canlı istatistikleri görürsünüz.
+                            {t("description")}
                         </motion.p>
 
                         {/* Bullets */}
@@ -63,11 +60,7 @@ export function FlowAsistanHero() {
                             transition={{ duration: 0.5, delay: 0.3 }}
                             className="space-y-3 mb-10 max-w-xl mx-auto md:mx-0"
                         >
-                            {[
-                                "7/24 otomatik karşılama (mesaj + arama)",
-                                "Tek panelden takip ve düzen",
-                                "Canlı istatistik ve analiz"
-                            ].map((item, index) => (
+                            {bullets.map((item, index) => (
                                 <div key={index} className="flex items-start gap-3">
                                     <CheckCircle2 className="w-5 h-5 text-blue-500 mt-0.5 shrink-0" />
                                     <span className="text-gray-300 text-sm md:text-base">{item}</span>
@@ -91,13 +84,13 @@ export function FlowAsistanHero() {
                                 >
                                     <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2E8F0_0%,#393BB2_50%,#E2E8F0_100%)]" />
                                     <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-blue-600 px-8 py-2 text-base font-medium text-white backdrop-blur-3xl transition-all group-hover:bg-blue-700 gap-2">
-                                        Kısa Bir Tanışma Planla
+                                        {t("cta")}
                                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                     </span>
                                 </button>
 
                                 <span className="text-sm text-center md:text-center text-gray-500 font-medium tracking-wide mt-3 w-full">
-                                    30 dk tanışma & ihtiyaç analizi • Uygunsa canlı demo
+                                    {t("ctaNote")}
                                 </span>
                             </div>
                         </motion.div>

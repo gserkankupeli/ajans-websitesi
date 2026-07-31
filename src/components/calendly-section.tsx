@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 export function CalendlySection() {
+    const t = useTranslations("Home.Booking");
 
     // Initialize Cal.com widget
     useEffect(() => {
@@ -52,10 +54,10 @@ export function CalendlySection() {
 
                 <div className="max-w-3xl mx-auto text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                        Sektörünüze Uygun Yapay Zeka Destekli Otomasyon Sistemleri Hakkında Fikir Alın
+                        {t("title")}
                     </h2>
                     <p className="text-lg text-gray-300 mb-8">
-                        Kısa bir tanışma yapalım. Mevcut sürecinizi dinleyip size özel Yol Haritası hazırlayalım.
+                        {t("description")}
                     </p>
                 </div>
 

@@ -1,14 +1,20 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Link, usePathname } from "@/i18n/routing";
+import { useTranslations, useLocale } from "next-intl";
+import { Link, usePathname, useRouter } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import NextImage from "next/image";
 import { ArrowLeft } from "lucide-react";
+import { LanguageSwitcher } from "@/components/language-switcher";
 
 export function FlowAsistanStickyHeader() {
+    const t = useTranslations("FlowAsistan.Nav");
+    // Blog içeriği şu an yalnızca Türkçe yayında
+    const showBlog = useLocale() === "tr";
     const [scrolled, setScrolled] = useState(false);
     const pathname = usePathname();
+    const router = useRouter();
     const isBlogPage = pathname.includes("/flowasistan/blog");
 
     useEffect(() => {
@@ -21,7 +27,7 @@ export function FlowAsistanStickyHeader() {
 
     const scrollToSection = (id: string) => {
         if (isBlogPage) {
-            window.location.href = `/tr/flowasistan#${id}`;
+            router.push(`/flowasistan#${id}`);
             return;
         }
 
@@ -60,42 +66,47 @@ export function FlowAsistanStickyHeader() {
                 <nav className="hidden md:flex items-center space-x-6">
                     {isBlogPage ? (
                         <Link href="/flowasistan" className="flex items-center gap-2 cursor-pointer text-sm font-semibold text-white/80 hover:text-white hover:text-shadow-sm transition-all drop-shadow-md">
-                            <ArrowLeft className="w-4 h-4" /> FlowAsistan'a Dön
+                            <ArrowLeft className="w-4 h-4" /> {t("backToProduct")}
                         </Link>
                     ) : (
                         <>
                             <button onClick={() => scrollToSection("nasil")} className="cursor-pointer text-sm font-semibold text-white/80 hover:text-white hover:text-shadow-sm transition-all drop-shadow-md">
-                                Nasıl Çalışır?
+                                {t("howItWorks")}
                             </button>
                             <button onClick={() => scrollToSection("ozellikler")} className="cursor-pointer text-sm font-semibold text-white/80 hover:text-white hover:text-shadow-sm transition-all drop-shadow-md">
-                                Özellikler
+                                {t("features")}
                             </button>
                             <button onClick={() => scrollToSection("sss")} className="cursor-pointer text-sm font-semibold text-white/80 hover:text-white hover:text-shadow-sm transition-all drop-shadow-md">
-                                SSS
+                                {t("faq")}
                             </button>
-                            <Link href="/flowasistan/blog" className="cursor-pointer text-sm font-semibold text-blue-400 hover:text-blue-300 hover:text-shadow-sm transition-all drop-shadow-md">
-                                Blog
-                            </Link>
+                            {showBlog && (
+                                <Link href="/flowasistan/blog" className="cursor-pointer text-sm font-semibold text-blue-400 hover:text-blue-300 hover:text-shadow-sm transition-all drop-shadow-md">
+                                    {t("blog")}
+                                </Link>
+                            )}
                         </>
                     )}
                 </nav>
 
                 {/* CTA Button */}
-                {isBlogPage ? (
-                    <Link
-                        href="/flowasistan#randevu"
-                        className="cursor-pointer bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-colors shadow-sm"
-                    >
-                        Kısa Bir Tanışma Planla
-                    </Link>
-                ) : (
-                    <button
-                        onClick={() => scrollToSection("randevu")}
-                        className="cursor-pointer bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-colors shadow-sm"
-                    >
-                        Kısa Bir Tanışma Planla
-                    </button>
-                )}
+                <div className="flex items-center gap-3">
+                    <LanguageSwitcher />
+                    {isBlogPage ? (
+                        <Link
+                            href="/flowasistan#randevu"
+                            className="cursor-pointer bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-colors shadow-sm"
+                        >
+                            {t("cta")}
+                        </Link>
+                    ) : (
+                        <button
+                            onClick={() => scrollToSection("randevu")}
+                            className="cursor-pointer bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-colors shadow-sm"
+                        >
+                            {t("cta")}
+                        </button>
+                    )}
+                </div>
             </div>
         </header>
     );

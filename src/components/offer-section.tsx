@@ -1,42 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { ArrowRight, FileText, Search, Target } from "lucide-react";
 
-const steps = [
-    {
-        icon: Search,
-        text: "İşletmenizde neyin zaman çaldığını birlikte belirliyoruz"
-    },
-    {
-        icon: Target,
-        text: "Hangi süreçlerin otomatikleştirilebileceğini netleştiriyoruz"
-    },
-    {
-        icon: FileText,
-        text: "Size özel bir strateji ve uygulama planı çıkarıyoruz"
-    }
-];
-
-const processSteps = [
-    {
-        number: "01",
-        title: "Sizi Tanıyoruz",
-        desc: "İşletmenizde neyin zaman çaldığını, neyin kaybolduğunu anlamak için 30 dakika konuşuyoruz."
-    },
-    {
-        number: "02",
-        title: "Plan Sunuyoruz",
-        desc: "Hangi sistemleri neden kuracağımızı, ne zaman hazır olacağını net bir planla gösteriyoruz."
-    },
-    {
-        number: "03",
-        title: "Kuruyoruz",
-        desc: "Onayladıktan sonra kurulum başlar. Mevcut araçlarınıza entegre çalışır."
-    }
-];
+const stepIcons = [Search, Target, FileText];
 
 export function OfferSection() {
+    const t = useTranslations("Home.Offer");
+    const steps = (t.raw("steps") as string[]).map((text, i) => ({
+        icon: stepIcons[i],
+        text
+    }));
+    const processSteps = (t.raw("processSteps") as { title: string; desc: string }[]).map(
+        (item, i) => ({ ...item, number: `0${i + 1}` })
+    );
+
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
         if (element) {
@@ -51,7 +30,7 @@ export function OfferSection() {
                 {/* Nasıl Çalışıyoruz */}
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4">
-                        Nasıl Çalışıyoruz?
+                        {t("processTitle")}
                     </h2>
                 </div>
 
@@ -85,7 +64,7 @@ export function OfferSection() {
                             viewport={{ once: true }}
                             className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-6"
                         >
-                            30 Dakika Konuşalım
+                            {t("ctaTitle")}
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 10 }}
@@ -94,7 +73,7 @@ export function OfferSection() {
                             transition={{ delay: 0.1 }}
                             className="text-lg text-gray-600 mb-10 leading-relaxed"
                         >
-                            İşletmenizde hangi süreçleri otomatikleştirebileceğimizi birlikte belirleriz. Somut bir değerlendirme yapıyoruz.
+                            {t("ctaDescription")}
                         </motion.p>
                         <div className="space-y-6 mb-10">
                             {steps.map((step, index) => (
@@ -121,7 +100,7 @@ export function OfferSection() {
                             onClick={() => scrollToSection("randevu")}
                             className="group cursor-pointer bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all hover:scale-105 shadow-lg shadow-blue-500/20 flex items-center gap-2"
                         >
-                            <span>30 Dakikada Ne Kazanacağınızı Görün</span>
+                            <span>{t("cta")}</span>
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </motion.button>
                     </div>
@@ -136,8 +115,8 @@ export function OfferSection() {
                         <div className="aspect-square rounded-2xl bg-white border border-gray-100 shadow-xl p-8 flex flex-col items-center justify-center text-center relative overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-tr from-blue-50 to-transparent opacity-50" />
                             <FileText className="w-24 h-24 text-blue-600 mb-6 relative z-10" />
-                            <h3 className="text-xl font-bold text-[#0F172A] mb-2 relative z-10">Strateji Keşfi</h3>
-                            <p className="text-sm text-gray-500 relative z-10">Somut bir değerlendirme</p>
+                            <h3 className="text-xl font-bold text-[#0F172A] mb-2 relative z-10">{t("cardTitle")}</h3>
+                            <p className="text-sm text-gray-500 relative z-10">{t("cardSubtitle")}</p>
                         </div>
                     </motion.div>
                 </div>

@@ -2,32 +2,12 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
-const faqs = [
-    {
-        question: "Her sektör için uygun mu?",
-        answer: "Evet. Sektöre değil, iş süreçlerine bakıyoruz. Talep takibi, müşteri iletişimi veya rutin operasyonları olan her işletmeyle çalışabiliriz."
-    },
-    {
-        question: "Görüşmeden ne alacağım?",
-        answer: "İşletmenizde hangi işlerin otomatikleştirilebileceğini, ne kadar zaman kazanabileceğinizi ve nasıl ilerleyebileceğimizi net bir şekilde görürsünüz. Ücretli değil."
-    },
-    {
-        question: "Mevcut sistemlerimiz var, sorun olur mu?",
-        answer: "Hayır. Kullandığınız araçlara entegre çalışıyoruz. Her şeyi baştan kurmak zorunda değilsiniz."
-    },
-    {
-        question: "Görüşme ne kadar sürüyor?",
-        answer: "30 dakika. Takvimden istediğiniz saati seçiyorsunuz."
-    },
-    {
-        question: "Yapay zeka yanlış yönlendirirse ne olur?",
-        answer: "Kritik adımlarda sistem sizin onayınızla ilerler. Tamamen otomasyona bırakılan tek şey rutin ve tekrar eden işlerdir."
-    }
-];
-
 export function FAQSection() {
+    const t = useTranslations("Home.FAQ");
+    const faqs = t.raw("items") as { question: string; answer: string }[];
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
@@ -36,7 +16,7 @@ export function FAQSection() {
 
                 <div className="max-w-2xl mx-auto text-center mb-12">
                     <h2 className="text-3xl md:text-3xl font-bold text-[#0F172A] mb-4">
-                        Sık sorulan sorular
+                        {t("title")}
                     </h2>
                 </div>
 

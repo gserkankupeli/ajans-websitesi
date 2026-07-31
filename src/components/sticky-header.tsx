@@ -1,11 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/routing";
 import NextImage from "next/image";
 import { cn } from "@/lib/utils";
+import { LanguageSwitcher } from "@/components/language-switcher";
 
 export function StickyHeader() {
+    const t = useTranslations("Home.Nav");
+    // Blog içeriği şu an yalnızca Türkçe yayında
+    const showBlog = useLocale() === "tr";
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -51,29 +56,31 @@ export function StickyHeader() {
                 {/* Desktop Links (Optional & Minimal) */}
                 <nav className="hidden md:flex items-center space-x-6">
                     <button onClick={() => scrollToSection("neler-yapiyoruz")} className="cursor-pointer text-sm font-semibold text-white/80 hover:text-white hover:text-shadow-sm transition-all drop-shadow-md">
-                        Neler Yapıyoruz
+                        {t("whatWeDo")}
                     </button>
                     <button onClick={() => scrollToSection("ornekler")} className="cursor-pointer text-sm font-semibold text-white/80 hover:text-white hover:text-shadow-sm transition-all drop-shadow-md">
-                        Projeler
-                    </button>
-                    <button onClick={() => scrollToSection("surec")} className="cursor-pointer text-sm font-semibold text-white/80 hover:text-white hover:text-shadow-sm transition-all drop-shadow-md">
-                        Süreç
+                        {t("projects")}
                     </button>
                     <button onClick={() => scrollToSection("sss")} className="cursor-pointer text-sm font-semibold text-white/80 hover:text-white hover:text-shadow-sm transition-all drop-shadow-md">
-                        Sık Sorulan Sorular
+                        {t("faq")}
                     </button>
-                    <Link href="/blog" className="cursor-pointer text-sm font-semibold text-blue-400 hover:text-blue-300 hover:text-shadow-sm transition-all drop-shadow-md">
-                        Blog
-                    </Link>
+                    {showBlog && (
+                        <Link href="/blog" className="cursor-pointer text-sm font-semibold text-blue-400 hover:text-blue-300 hover:text-shadow-sm transition-all drop-shadow-md">
+                            {t("blog")}
+                        </Link>
+                    )}
                 </nav>
 
                 {/* CTA Button */}
-                <button
-                    onClick={() => scrollToSection("randevu")}
-                    className="cursor-pointer bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-colors shadow-sm"
-                >
-                    Kısa Bir Tanışma Planla
-                </button>
+                <div className="flex items-center gap-3">
+                    <LanguageSwitcher />
+                    <button
+                        onClick={() => scrollToSection("randevu")}
+                        className="cursor-pointer bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-colors shadow-sm"
+                    >
+                        {t("cta")}
+                    </button>
+                </div>
             </div>
         </header>
     );

@@ -1,42 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { MessageCircle, Phone, MessageSquareQuote, Filter, LayoutDashboard, BarChart } from "lucide-react";
 
-const features = [
-    {
-        icon: MessageCircle,
-        title: "Mesaj Karşılama",
-        description: "WhatsApp/Instagram gibi kanallardan gelen mesajları otomatik karşılama.",
-    },
-    {
-        icon: Phone,
-        title: "Arama Karşılama",
-        description: "Telefon aramalarını otomatik karşılama ve yönlendirme.",
-    },
-    {
-        icon: MessageSquareQuote,
-        title: "Sık Sorulan Sorular",
-        description: "Müşterilerinizin sık sorduğu soruları hızlıca yanıtlama ve doğru yönlendirme.",
-    },
-    {
-        icon: Filter,
-        title: "Otomatik Filtre",
-        description: "Talepleri nitelikli ve niteliksiz olarak ayırma, ekibinizin odağını koruma.",
-    },
-    {
-        icon: LayoutDashboard,
-        title: "Tek Panel",
-        description: "Tüm iletişim kanallarını ve müşteri taleplerini tek panelden kayıt altına alma ve takip düzeni.",
-    },
-    {
-        icon: BarChart,
-        title: "Canlı İstatistik",
-        description: "İşletmenizin performansını anlık olarak gösteren analiz ve konuşma özeti paneli.",
-    },
-];
+const icons = [MessageCircle, Phone, MessageSquareQuote, Filter, LayoutDashboard, BarChart];
 
 export function FlowAsistanFeatures() {
+    const t = useTranslations("FlowAsistan.Features");
+    const features = (t.raw("items") as { title: string; description: string }[]).map(
+        (item, i) => ({ ...item, icon: icons[i] })
+    );
+
     return (
         <section id="ozellikler" className="py-24 bg-gray-50">
             <div className="container mx-auto px-4 md:px-6">
@@ -48,8 +23,8 @@ export function FlowAsistanFeatures() {
                         transition={{ duration: 0.5 }}
                         className="text-3xl md:text-5xl font-bold text-gray-900 mb-4"
                     >
-                        İşinize Göre Şekillenen <br />
-                        <span className="text-blue-600">Otomatik Karşılama</span>
+                        {t("titleLine1")} <br />
+                        <span className="text-blue-600">{t("titleHighlight")}</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -58,7 +33,7 @@ export function FlowAsistanFeatures() {
                         transition={{ duration: 0.5, delay: 0.1 }}
                         className="text-xl text-gray-600"
                     >
-                        FlowAsistan, farklı kanallardan gelen iletişimi tek akışta toplar ve işletmenize uygun şekilde çalışır.
+                        {t("description")}
                     </motion.p>
                 </div>
 
